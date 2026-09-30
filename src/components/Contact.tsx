@@ -7,6 +7,8 @@ import { useHls } from "./useHls";
 const socials = [
   { label: "Email", href: `mailto:${profile.email}` },
   { label: "GitHub", href: profile.github },
+  { label: "LinkedIn", href: profile.linkedin },
+  { label: "X", href: profile.x },
   { label: "Phone", href: `tel:${profile.phone}` },
 ];
 
@@ -35,7 +37,7 @@ export default function Contact() {
         </div>
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-stroke pt-8">
           <div className="flex gap-6 text-sm text-muted">
-            {socials.map((s) => <a key={s.label} href={s.href} className="hover:text-text-primary transition-colors">{s.label}</a>)}
+            {socials.map((s) => <a key={s.label} href={s.href} {...(s.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="hover:text-text-primary transition-colors">{s.label}</a>)}
           </div>
           <div className="flex items-center gap-2 text-sm text-muted">
             <span className="relative flex h-2 w-2">

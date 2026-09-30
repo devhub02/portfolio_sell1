@@ -5,6 +5,8 @@ export const profile = {
   phone: "9084830365",
   location: "Gaya, India",
   github: "https://github.com/devhub02",
+  linkedin: "https://www.linkedin.com/in/devhub02/",
+  x: "https://x.com/devhub02",
   resume: "/Devendra_Kumar_Resume.docx",
   summary:
     "Early-career Mechanical Engineer with hands-on experience in mechanical design, product development, project management, and technical analysis. Strong entrepreneurial mindset with experience in startup vision and business model development.",

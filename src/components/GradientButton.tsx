@@ -14,7 +14,7 @@ export default function GradientButton({ children, href, onClick, className = ""
   );
   const cls = `group relative inline-flex rounded-full ${className}`;
   return href ? (
-    <a href={href} className={cls}>{inner}</a>
+    <a href={href} className={cls} {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{inner}</a>
   ) : (
     <button onClick={onClick} className={cls}>{inner}</button>
   );
